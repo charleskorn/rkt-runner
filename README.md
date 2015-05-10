@@ -15,7 +15,7 @@ Role Variables
 
 This role has two required variables:
 
-* `image_path`: the path to the ACI in the filesystem (eg. `/images/cool-thing.aci`)
+* `image_path`: the path to the ACI (eg. `/images/cool-thing.aci` or `http://www.example.com/cool-thing.aci` or `example.com/cool-thing:v1.2.3`)
 * `service_name`: the name of the service (eg. `cool-thing`)
 
 There is also one optional variable:
