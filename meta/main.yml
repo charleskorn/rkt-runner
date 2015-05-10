@@ -1,0 +1,12 @@
+---
+galaxy_info:
+  author: Charles Korn
+  description: An Ansible role for creating a systemd service unit that runs a rkt image.
+  license: MIT
+  min_ansible_version: 1.2
+  categories:
+  - development
+  - packaging
+  - system
+  dependencies: []
+allow_duplicates: yes

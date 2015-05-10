@@ -1,0 +1,15 @@
+[Unit]
+Description=rkt image: {{ image_path }}
+After=network.target
+Requires=network.target
+
+[Service]
+ExecStart=/usr/bin/rkt run {{ image_path }} {% if extra_args is defined %} -- {{ extra_args }} {% endif %}
+
+Restart=always
+RestartSec=5
+TimeoutSec=5
+User=root
+
+[Install]
+WantedBy=multi-user.target
