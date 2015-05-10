@@ -1,7 +1,7 @@
 rkt-runner
 =========
 
-An Ansible role for creating a systemd service unit that runs a rkt image.
+An Ansible role for creating a systemd service unit that runs an ACI using rkt.
 
 Requirements
 ------------
