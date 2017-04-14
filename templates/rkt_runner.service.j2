@@ -1,10 +1,10 @@
 [Unit]
-Description=rkt image: {{ image_path }}
+Description=rkt image: {{ item.value.image_path }}
 After=network.target
 Requires=network.target
 
 [Service]
-ExecStart=/usr/bin/rkt run {{ image_path }} {% if extra_args is defined %} -- {{ extra_args }} {% endif %}
+ExecStart=/usr/bin/rkt run {% if item.value.rkt_opts is defined %}{{item.value.rkt_opts}}{% endif %} {{item.value.image_path}} {% if item.value.extra_args is defined %} -- {{item.value.extra_args}} {% endif %}
 
 Restart=always
 RestartSec=5
