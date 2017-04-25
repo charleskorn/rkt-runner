@@ -6,7 +6,7 @@ An Ansible role for creating a systemd service unit that runs an ACI using rkt.
 Requirements
 ------------
 
-Assumes that [rkt](https://github.com/coreos/rkt) is already installed on the target system and is available at `/usr/bin/rkt`. 
+Assumes that [rkt](https://github.com/coreos/rkt) is already installed on the target system and is available at `/usr/bin/rkt`.
 
 Requires [systemd](http://freedesktop.org/wiki/Software/systemd/). [The Wikipedia article for systemd](http://en.wikipedia.org/wiki/Systemd) lists the Linux distributions and corresponding versions that come with systemd out of the box.
 
@@ -18,10 +18,12 @@ This role has two required variables:
 * `image_path`: the path to the ACI (eg. `/images/cool-thing.aci` or `http://www.example.com/cool-thing.aci` or `example.com/cool-thing:v1.2.3`)
 * `service_name`: the name of the service (eg. `cool-thing`)
 
-There is also one optional variable:
+There is also two optional variable:
 
-* `extra_args`: arguments to pass through to the container's executable 
+* `extra_args`: arguments to pass through to the container's executable
   (eg. setting `extra_args` to `--do-stuff` will result in the `rkt run` command being `/usr/bin/rkt run /path/to/image.aci -- --do-stuff`)
+
+* `rkt_opts`: rkt options (eg. https://coreos.com/rkt/docs/latest/subcommands/run.html)
 
 Dependencies
 ------------
