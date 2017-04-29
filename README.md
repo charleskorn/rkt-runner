@@ -18,11 +18,10 @@ This role has two required variables:
 * `image_path`: the path to the ACI (eg. `/images/cool-thing.aci` or `http://www.example.com/cool-thing.aci` or `example.com/cool-thing:v1.2.3`)
 * `service_name`: the name of the service (eg. `cool-thing`)
 
-There is also two optional variable:
+There are also two optional variables:
 
 * `extra_args`: arguments to pass through to the container's executable
   (eg. setting `extra_args` to `--do-stuff` will result in the `rkt run` command being `/usr/bin/rkt run /path/to/image.aci -- --do-stuff`)
-
 * `rkt_opts`: rkt options (eg. https://coreos.com/rkt/docs/latest/subcommands/run.html)
 
 Dependencies
